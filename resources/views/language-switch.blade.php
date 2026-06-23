@@ -1,6 +1,6 @@
 <x-filament::dropdown placement="bottom-end">
     <x-slot name="trigger">
-        <x-filament::icon-button icon="flag-lang" label="New label" />
+        <x-filament::icon-button icon="bites-lang" label="Languange Translator" />
     </x-slot>
 
     <x-filament::dropdown.list>

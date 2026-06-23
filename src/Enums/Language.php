@@ -32,14 +32,14 @@ enum Language: string
     public function getIcon(): string
     {
         return match ($this) {
-            self::English => 'flag-en',
-            self::Korean => 'flag-ko',
-            self::Malay => 'flag-ms',
-            self::Japanese => 'flag-jp',
-            self::Portuguese => 'flag-pt',
-            self::Chinese => 'flag-zh-CN',
-            self::Vietnamese => 'flag-vi',
-            self::Tagalog => 'flag-tl',
+            self::English => 'bites-flag-en',
+            self::Korean => 'bites-flag-ko',
+            self::Malay => 'bites-flag-ms',
+            self::Japanese => 'bites-flag-jp',
+            self::Portuguese => 'bites-flag-pt',
+            self::Chinese => 'bites-flag-zh-CN',
+            self::Vietnamese => 'bites-flag-vi',
+            self::Tagalog => 'bites-flag-tl',
         };
     }
 

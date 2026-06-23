@@ -4,28 +4,24 @@ declare(strict_types=1);
 
 namespace Bites\GoogleTranslate;
 
-use BladeUI\Icons\Factory;
-use Illuminate\Support\ServiceProvider;
+use App\Services\BitesServiceProvider;
 use Bites\GoogleTranslate\Actions\RegisterLanguageSwitcher;
 
-class GoogleTranslateServiceProvider extends ServiceProvider
+class GoogleTranslateServiceProvider extends BitesServiceProvider
 {
+    protected string $configFile =
+        __DIR__ . '/../config/bites.php';
+
+    protected string $viewsPath =
+        __DIR__ . '/../resources/views';
+
+    protected string $iconsPath =
+        __DIR__ . '/../resources/svg';
+
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'bites');
+        parent::boot();
 
         app(RegisterLanguageSwitcher::class)->execute();
-
-        $this->callAfterResolving(Factory::class, function (Factory $factory): void {
-            $factory->add('bites', [
-                'path' => __DIR__ . '/../resources/svg',
-                'prefix' => 'flag',
-            ]);
-            // dump($factory);
-        });
-    }
-    public function register(): void
-    {
-        //
     }
 }
