@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Bites\GoogleTranslate;
 
 use App\Services\BitesServiceProvider;
-use Bites\GoogleTranslate\Actions\RegisterLanguageSwitcher;
+use Bites\GoogleTranslate\Actions\DiscoverLanguageSwitcher;
 
 class GoogleTranslateServiceProvider extends BitesServiceProvider
 {
@@ -22,6 +22,6 @@ class GoogleTranslateServiceProvider extends BitesServiceProvider
     {
         parent::boot();
 
-        app(RegisterLanguageSwitcher::class)->execute();
+        app(DiscoverLanguageSwitcher::class)->execute();
     }
 }
