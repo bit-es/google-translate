@@ -8,7 +8,7 @@ use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
 use Bites\GoogleTranslate\Enums\Language;
 
-class RegisterLanguageSwitcher
+class DiscoverLanguageSwitcher
 {
     public function execute(): void
     {
