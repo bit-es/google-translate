@@ -18,9 +18,13 @@ class DiscoverLanguageSwitcher
             PanelsRenderHook::USER_MENU_AFTER,
             fn() => view('bites::language-switch')
         );
+        FilamentView::registerRenderHook(
+            PanelsRenderHook::SIMPLE_PAGE_END,
+            fn() => view('bites::language-switch')
+        );
 
         FilamentView::registerRenderHook(
-            PanelsRenderHook::SIDEBAR_FOOTER,
+            PanelsRenderHook::FOOTER,
             fn(): string => <<<HTML
             <script>
                 window.googleTranslateElementInit = function () {
