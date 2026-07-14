@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Bites\GoogleTranslate;
 
-use App\Services\BitesServiceProvider;
+use Bites\Base\Services\BitesServiceProvider;
 use Bites\GoogleTranslate\Actions\DiscoverLanguageSwitcher;
 
 class GoogleTranslateServiceProvider extends BitesServiceProvider
